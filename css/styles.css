@@ -1,0 +1,359 @@
+/*CSS Reset*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline; } article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; } body { line-height: 1; } ol, ul { list-style: none; } blockquote, q { quotes: none; } blockquote:before, blockquote:after, q:before, q:after { content: ''; content: none; } table { border-collapse: collapse; border-spacing: 0; } *{box-sizing: border-box;}
+/*CSS Reset*/
+
+html, body{
+    height: 100%;
+    position: relative;
+}
+.afterwrap{
+    font-family: 'Open Sans', Arial, sans-serif;
+    min-height: 100%;
+    position: relative;
+    background: #f9f9f9;
+    overflow: hidden;
+}
+.srch-wrap{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 450ms;
+}
+.srch-wrap input{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    border-radius: 30px;
+    outline: none;
+    background: #fff;
+    border: solid 1px #333;
+    padding: 0 60px 0 20px;
+    font-size: 18px;
+    color: #333;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.srch-wrap input::placeholder{
+    color: #c2c2c2;
+}
+.srch-wrap a.srch-icon{
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    padding: 20px;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    border-radius: 0 30px 30px 0;
+}
+.srch-wrap a.srch-icon img{
+    width: 100%;
+    height: 100%;
+    transition: all 450ms;
+}
+.srch-wrap a:hover img{
+    transform: scale(1.1);
+}
+.txtbox-wrap{
+    position: relative;
+    height: 60px;
+    width: 40vw;
+    min-width: 300px;
+    margin: 0 auto;
+}
+.clr-txt{
+    position: absolute;
+    font-size: 12px;
+    cursor: pointer;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 48px;
+    display: none;
+}
+.logo-wrap{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 25px;
+}
+.logo-wrap img{
+    width: 40px;
+}
+.logo-wrap span{
+    padding-left: 20px;
+    font-size: 25px;
+    color: #0288d1;
+    font-weight: 700;
+}
+.recent-wrap{
+    padding: 25px 25px 0;
+    flex-flow: column;
+    align-items: center;
+}
+.recent-wrap p{
+    font-size: 12px;
+    color: #333;
+    line-height: 1.4;
+}
+.result-wrap{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.result-wrap a{
+    padding: 5px 7px;
+    margin: 12px 0 0 12px;
+    font-size: 12px;
+    background: #fff;
+    border: solid 1px #ccc;
+    border-radius: 11px;
+    cursor: pointer;
+    color: #333;
+    transition: all 450ms;
+    max-width: 100px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.result-wrap a:first-of-type{
+    margin-left: 0;
+}
+.result-wrap a:hover{
+    background: #ccc;
+    color: #333;
+    border-color: #ccc;
+}
+.surpr-txt{
+    background: #0288d1;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 110px;
+    width: 100%;
+    height: 35px;
+    border-radius: 7px;
+    font-size: 14px;
+    font-weight: 700;
+    margin: 25px auto 0;
+    cursor: pointer;
+    transition: all 450ms;
+}
+.surpr-txt:hover{
+    transform: translateY(-3px);
+}
+.srch-wrap.top-shift{
+    top: 0;
+    transform: translate(-50%, 0);
+    padding: 0 15px;
+    max-width: 1360px;
+    width: 100%;
+    height: 70px;
+}
+.srch-wrap.top-shift .txtbox-wrap{
+    height: 40px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.srch-wrap.top-shift input{
+    font-size: 15px;
+}
+.srch-wrap.top-shift a.srch-icon{
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+}
+.srch-wrap.top-shift .logo-wrap{
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    padding-bottom: 0;
+    cursor: pointer;
+}
+.srch-wrap.top-shift .logo-wrap span{
+    display: none;
+}
+.srch-wrap.top-shift .recent-wrap{
+    display: none !important;
+}
+.srch-wrap.top-shift .surpr-txt{
+    position: absolute;
+    margin: 0;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 12px;
+    max-width: 95px;
+    height: 30px;
+}
+.srch-wrap.top-shift .surpr-txt:hover{
+    transform: translateY(-53%);
+}
+.topbar{
+    width: 100%;
+    height: 70px;
+    padding: 15px;
+    position: fixed;
+    left: 0;
+    top: -100%;
+    background: #fff;
+    transition: all 450ms;
+    box-shadow: 2px 7px 30px 3px rgba(100,96,96,0.25);
+}
+.img-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    position: relative;
+    padding: 0 15px;
+    max-width: 1360px;
+    margin: 70px auto 10px;
+}
+.img-box img{
+    width: 256px;
+    height: 150px;
+    display: block;
+    margin: 10px 0 0 10px;
+    cursor: pointer;
+    object-fit: cover;
+}
+.load-more-btn{
+    position: relative;
+    display: flex;
+    width: 180px;
+    height: 60px;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-weight: 600;
+    background: #27829e;
+    border: solid 1px #27829e;
+    border-radius: 5px;
+    color: #fff;
+    margin: 0 auto 30px;
+    cursor: pointer;
+    transition: all 450ms;
+}
+.load-more-btn:hover{
+    background: #fff;
+    color: #27829e;
+}
+.loader-wrap{
+    padding: 0 15px;
+    width: 100%;
+    max-width: 1360px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0 auto 50px;
+}
+@keyframes placeHolderShimmer {
+    0% {
+        background-position: -256px 0;
+    }
+    100% {
+        background-position: 256px 0;
+    }
+}
+.img-loader{
+    animation-duration: 1.25s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-name: placeHolderShimmer;
+    animation-timing-function: linear;
+    background: #e0dbdb;
+    background: linear-gradient(to right, #dcd7d7 8%, #d8d6d6 18%, #d4cfcf 33%);
+    background-size: 800px 104px;
+    width: 256px;
+    height: 150px;
+    margin: 10px 0 0 10px;
+    position: relative;
+}
+.show-case-wrap{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.95);
+}
+.show-case-wrap span{
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    color: #fff;
+    font-size: 35px;
+    font-weight: 700;
+    cursor: pointer;
+}
+.show-case-wrap p{
+    position: absolute;
+    font-size: 14px;
+    line-height: 1.4;
+    color: #fff;
+    text-align: center;
+    top: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.show-case-wrap img{
+    position: absolute;
+    max-width: 75vw;
+    max-height: 75vh;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    border: solid 2px rgba(255, 255, 255, 0.7);
+}
+@media only screen and (max-width: 599px){
+    .topbar{
+        height: 150px;
+    }
+    .srch-wrap.top-shift{
+        height: 150px;
+    }
+    .srch-wrap.top-shift .logo-wrap{
+        top: 10px;
+        left: 50%;
+        transform: translate(-50%,0);
+    }
+    .srch-wrap.top-shift .txtbox-wrap{
+        top: 80px;
+    }
+    .srch-wrap.top-shift .surpr-txt{
+        top: auto;
+        bottom: 10px;
+        left: 50%;
+        transform: translate(-50%, 0);
+    }
+    .srch-wrap.top-shift .surpr-txt:hover{
+        transform: translate(-50%, 0);
+    }
+    .img-box{
+        margin-top: 150px;
+    }
+}
+.error-wrap{
+    text-align: center;
+    position: fixed;
+    z-index: 9;
+    background: #353434;
+    color: red;
+    font-size: 15px;
+    top: -100%;
+    width: 100%;
+    height: 40px;
+    transition: top 450ms;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
